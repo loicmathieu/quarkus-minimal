@@ -7,6 +7,7 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import javax.inject.Inject;
 import javax.sql.DataSource;
+import javax.transaction.Transactional;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -21,6 +22,7 @@ public class GreetingMain implements QuarkusApplication {
 
     @Inject DataSource dataSource;
 
+    @Transactional
     @Override
     public int run(String... args) throws Exception {
         QueryRunner runner = new QueryRunner(dataSource);
