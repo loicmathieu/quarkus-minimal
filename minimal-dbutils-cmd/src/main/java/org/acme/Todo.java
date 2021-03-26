@@ -4,23 +4,23 @@ import io.quarkus.runtime.annotations.RegisterForReflection;
 
 @RegisterForReflection
 public class Todo {
-    public long id;
+    public Integer id;
     public String title;
     public String priority;
 
     public Todo() {}
 
-    public Todo(long id, String title, String priority) {
+    public Todo(Integer id, String title, String priority) {
         this.id = id;
         this.title = title;
         this.priority = priority;
     }
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
